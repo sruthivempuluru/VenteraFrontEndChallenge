@@ -1,3 +1,4 @@
+/* Font Face Declarations */
 @font-face {
     font-family: 'Work Sans Bold';
     src: url('assets/fonts/static/WorkSans-Bold.ttf') format('truetype');
@@ -5,107 +6,99 @@
 
 @font-face {
     font-family: 'Work Sans Regular';
-    src: url('assets/fonts/static/WorkSans-Regular.ttf') format('truetype'); /* Path to Regular font */
-   
+    src: url('assets/fonts/static/WorkSans-Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Work Sans SemiBold';
-    src: url('assets/fonts/static/WorkSans-SemiBold.ttf') format('truetype'); /* Path to SemiBold font */
+    src: url('assets/fonts/static/WorkSans-SemiBold.ttf') format('truetype');
 }
 
+/* Global Styles */
 body {
     font-family: 'Work Sans SemiBold', sans-serif;
-    background-color: hsl(275, 100%, 97%); /* Fallback color */
+    background-color: hsl(275, 100%, 97%);
     background-image: url('./assets/images/background-pattern-desktop.svg');
-    background-size: cover; /* Ensure the image covers the screen without stretching */
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center; /* Center the background image */
-    position: relative; /* Allows z-index to take effect */
-    height: 30vh;
-    color: hsl(292, 42%, 14%); /* Change text color of question title */
-
-    
-
+    background-position: center;
+    position: relative;
+    height: 25vh;
+    color: hsl(292, 42%, 14%);
 }
 
+/* Header Styles */
 .header {
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Center items vertically */
+    display: flex;
+    align-items: center;
 }
 
 .star-icon {
-    margin-right: 10px; /* Space between icon and title */
+    margin-right: 20px;
 }
 
-
-
+/* Title Styles */
 .title__accordion {
-    font-family: 'Work Sans Bold', sans-serif; /* Ensure the font is applied */
-    color: hsl(292, 42%, 14%); /* Change text color of question title */
-
+    font-family: 'Work Sans Bold', sans-serif;
+    color: hsl(292, 42%, 14%);
+    font-size: 50px;
 }
 
+/* Question Styles */
 .question {
-    display: flex; /* Use flexbox to align items */
-    justify-content: space-between; /* Space items to fill the container */
-    align-items: center; /* Center items vertically */
-    margin-bottom: 1rem; /* Space between questions */
-    cursor: pointer; /* Change cursor to pointer to indicate clickable */
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    cursor: pointer;
 }
 
 .question:hover .title__question {
-    color: hsl(280, 86%, 55%); /* Change text color of question title on hover */
+    color: hsl(280, 86%, 55%);
 }
 
-
- .answer {
+/* Answer Styles */
+.answer {
     display: none;
-}
-
-
-.questions__accordions {
-    display: flex;
-    flex-direction: column;
 }
 
 .answer {
     font-family: 'Work Sans Regular', sans-serif;
     font-size: 16px;
-    color: hsl(292, 16%, 49%); /* Change text color of question title */
-    border-bottom: 1px solid hsl(275, 100%, 97%); 
-    padding-bottom: 1.5rem; 
+    color: hsl(292, 16%, 49%);
+    padding-bottom: 1rem;
 }
 
-  
-  /* Media query for screens 1440px and above (Desktop) */
-  @media (min-width: 1440px) {
-    body {
-      background-size: cover; /* Ensures the image covers the screen */
-      background-position: center top; /* Positions the image towards the top */
-    }
-  }
-  
-  /* Media query for smaller screens (Mobile) */
-  @media (max-width: 767px) { /* Adjust as needed for your breakpoints */
-    body {
-      background-image: url('./assets/images/background-pattern-mobile.svg'); /* Use a mobile-specific image if available */
-      background-size: contain; /* Ensures the image is fully visible on smaller screens */
-      background-position: top center; /* Positions image for mobile layout */
-    }
-  }
+/* Accordion Styles */
+.question-answer__accordion {
+    border-bottom: 1px solid hsl(275, 100%, 97%);
+}
 
-
+/* Wrapper Styles */
 .wrapper {
     background: white;
-    border-radius: 30px;
-    max-width: 600px; /* Set a max width to limit the box size */
-    width: 90%; /* Use percentage width for responsiveness */
-    padding: 2rem; /* Add padding inside the box */
-    margin: 2rem auto; /* Center the box horizontally and add vertical margin */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
-    z-index: 1; /* Ensure it sits above the background */
-    position: relative; /* Positioning context for z-index */
-    border-radius: 30px;
+    border-radius: 15px;
+    max-width: 600px;
+    width: 90%;
+    padding: 2rem;
+    margin: 2rem auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    position: relative;
+}
+
+/* Media Queries */
+@media (min-width: 1440px) {
+    body {
+        background-size: cover;
+        background-position: center top;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        background-image: url('./assets/images/background-pattern-mobile.svg');
+        background-size: cover;
+        background-position: top center;
+    }
 }
