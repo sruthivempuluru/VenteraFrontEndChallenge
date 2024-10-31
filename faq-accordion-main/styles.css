@@ -15,35 +15,67 @@
 }
 
 body {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Work Sans SemiBold', sans-serif;
     background-color: hsl(275, 100%, 97%); /* Fallback color */
     background-image: url('./assets/images/background-pattern-desktop.svg');
     background-size: cover; /* Ensure the image covers the screen without stretching */
     background-repeat: no-repeat;
     background-position: center; /* Center the background image */
     position: relative; /* Allows z-index to take effect */
-    /* min-height: 100vh; Ensure body takes full height of viewport */
     height: 30vh;
+    color: hsl(292, 42%, 14%); /* Change text color of question title */
+
+    
 
 }
+
+.header {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+}
+
+.star-icon {
+    margin-right: 10px; /* Space between icon and title */
+}
+
 
 
 .title__accordion {
     font-family: 'Work Sans Bold', sans-serif; /* Ensure the font is applied */
+    color: hsl(292, 42%, 14%); /* Change text color of question title */
+
 }
 
 .question {
-    font-family: 'Work Sans SemiBold', sans-serif; /* Use Work Sans for questions */
+    display: flex; /* Use flexbox to align items */
+    justify-content: space-between; /* Space items to fill the container */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 1rem; /* Space between questions */
+    cursor: pointer; /* Change cursor to pointer to indicate clickable */
+
 }
+
+.question:hover .title__question {
+    color: hsl(280, 86%, 55%); /* Change text color of question title on hover */
+}
+
+
+ .answer {
+    display: none;
+}
+
 
 .questions__accordions {
     display: flex;
-    flex-direction: column; /* Align items vertically */
+    flex-direction: column;
 }
 
 .answer {
-    font-family: 'Work Sans Regular', sans-serif; /* Use Work Sans for answers */
+    font-family: 'Work Sans Regular', sans-serif;
     font-size: 16px;
+    color: hsl(292, 16%, 49%); /* Change text color of question title */
+    border-bottom: 1px solid hsl(275, 100%, 97%); 
+    padding-bottom: 1.5rem; 
 }
 
   
@@ -75,4 +107,5 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
     z-index: 1; /* Ensure it sits above the background */
     position: relative; /* Positioning context for z-index */
+    border-radius: 30px;
 }
